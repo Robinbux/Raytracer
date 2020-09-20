@@ -6,6 +6,6 @@ pub fn write_color(pixel_color: Color) {
         "{} {} {}\n",
         (255.999 * pixel_color.x()) as i32,
         (255.999 * pixel_color.y()) as i32,
-        (55.999 * pixel_color.z()) as i32
+        (255.999 * pixel_color.z()) as i32
     )
 }
