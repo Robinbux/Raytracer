@@ -1,7 +1,7 @@
 use std::ops;
 use std::ops::Mul;
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Default)]
 pub struct Vec3 {
     pub e: [f64; 3],
 }
