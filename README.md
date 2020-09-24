@@ -1,0 +1,19 @@
+# Rust Raytracer
+
+Rust implementation of [Raytracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html) (WIP).
+- [x] **Chapter 1**: Overview
+- [x] **Chapter 2**: Output an Image
+- [x] **Chapter 3**: The vec3 Class
+- [x] **Chapter 4**: Rays, a Simple Camera, and a Background
+- [x] **Chapter 5**: Adding a Sphere
+- [x] **Chapter 6**: Surface Normals and Multiple Objects
+- [ ] **Chapter 7**: Antialiasing
+- [ ] **Chapter 8**: Diffuse Materials
+- [ ] **Chapter 9**: Metal
+- [ ] **Chapter 10**: Dielectrics
+- [ ] **Chapter 11**: Positionable Camera
+- [ ] **Chapter 12**: Defocus Blur
+
+Usage: `cargo run > image.ppm`
+
+You can open the image file with a program of your choice, i.e. preview.
