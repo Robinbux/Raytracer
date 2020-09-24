@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="15c3493d-5c73-4b4a-9ad2-652bf3ff8399" />
+  <component name="KonanWorkspace">
+    <executables />
+  </component>
+  <component name="KotlinMultiplatform">
+    <executables />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="pog8op48" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hdsF09tHnX2NQcgZUD3DiXPf54" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/robinbux/Desktop/Code from Scratch/Raytracer/raytracing_in_one_week/ref2/src/hitable.rs" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run raytracing_in_one_week" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --package raytracing_in_one_week --bin raytracing_in_one_week" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Run raytracing_in_one_week" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="" />
+      <created>1600352199436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600352199436</updated>
+      <workItem from="1600352201407" duration="10054000" />
+      <workItem from="1600552355365" duration="1956000" />
+      <workItem from="1600593084431" duration="11327000" />
+      <workItem from="1600712282879" duration="6488000" />
+      <workItem from="1600796109053" duration="388000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser" timestamp="1600715592745">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1600715592745" />
+    <state x="366" y="552" key="#xdebugger.evaluate" timestamp="1600604106368">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="366" y="552" key="#xdebugger.evaluate/0.23.2560.1417@0.23.2560.1417" timestamp="1600604106368" />
+    <state width="545" height="466" key="DebuggerActiveHint" timestamp="1600603752599">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="545" height="466" key="DebuggerActiveHint/0.23.2560.1417@0.23.2560.1417" timestamp="1600603752599" />
+    <state width="1398" height="302" key="GridCell.Tab.0.bottom" timestamp="1600760354489">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.0.bottom/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040654" />
+    <state width="1761" height="358" key="GridCell.Tab.0.bottom/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563722" />
+    <state width="1398" height="302" key="GridCell.Tab.0.bottom/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354489" />
+    <state width="1127" height="235" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1600718953376" />
+    <state width="1398" height="302" key="GridCell.Tab.0.center" timestamp="1600760354488">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.0.center/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040654" />
+    <state width="1761" height="358" key="GridCell.Tab.0.center/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563721" />
+    <state width="1398" height="302" key="GridCell.Tab.0.center/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354488" />
+    <state width="1127" height="235" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1600718953376" />
+    <state width="1398" height="302" key="GridCell.Tab.0.left" timestamp="1600760354487">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.0.left/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040653" />
+    <state width="1761" height="358" key="GridCell.Tab.0.left/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563718" />
+    <state width="1398" height="302" key="GridCell.Tab.0.left/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354487" />
+    <state width="1127" height="235" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1600718953375" />
+    <state width="1398" height="302" key="GridCell.Tab.0.right" timestamp="1600760354489">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.0.right/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040654" />
+    <state width="1761" height="358" key="GridCell.Tab.0.right/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563721" />
+    <state width="1398" height="302" key="GridCell.Tab.0.right/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354489" />
+    <state width="1127" height="235" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1600718953376" />
+    <state width="1398" height="302" key="GridCell.Tab.1.bottom" timestamp="1600760354491">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.1.bottom/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040656" />
+    <state width="1761" height="358" key="GridCell.Tab.1.bottom/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563724" />
+    <state width="1398" height="302" key="GridCell.Tab.1.bottom/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354491" />
+    <state width="1127" height="235" key="GridCell.Tab.1.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1600718956347" />
+    <state width="1398" height="302" key="GridCell.Tab.1.center" timestamp="1600760354490">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.1.center/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040655" />
+    <state width="1761" height="358" key="GridCell.Tab.1.center/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563724" />
+    <state width="1398" height="302" key="GridCell.Tab.1.center/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354490" />
+    <state width="1127" height="235" key="GridCell.Tab.1.center/0.23.2560.1417@0.23.2560.1417" timestamp="1600718956346" />
+    <state width="1398" height="302" key="GridCell.Tab.1.left" timestamp="1600760354490">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.1.left/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040655" />
+    <state width="1761" height="358" key="GridCell.Tab.1.left/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563723" />
+    <state width="1398" height="302" key="GridCell.Tab.1.left/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354490" />
+    <state width="1127" height="235" key="GridCell.Tab.1.left/0.23.2560.1417@0.23.2560.1417" timestamp="1600718956346" />
+    <state width="1398" height="302" key="GridCell.Tab.1.right" timestamp="1600760354491">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1266" height="282" key="GridCell.Tab.1.right/0.23.1440.877/-240.-1417.2560.1417@0.23.1440.877" timestamp="1600693040655" />
+    <state width="1761" height="358" key="GridCell.Tab.1.right/0.23.1680.1027/-252.-1669.3008.1669@-252.-1669.3008.1669" timestamp="1600414563724" />
+    <state width="1398" height="302" key="GridCell.Tab.1.right/0.23.1680.1027/-252.-1669.3008.1669@0.23.1680.1027" timestamp="1600760354491" />
+    <state width="1127" height="235" key="GridCell.Tab.1.right/0.23.2560.1417@0.23.2560.1417" timestamp="1600718956346" />
+    <state x="1045" y="342" key="SettingsEditor" timestamp="1600591522641">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1045" y="342" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1600591522641" />
+    <state x="338" y="328" width="604" height="490" key="find.popup" timestamp="1600719836524">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="338" y="328" width="604" height="490" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1600719836524" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/hittable.rs</url>
+          <line>48</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/hittable.rs</url>
+          <line>23</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
