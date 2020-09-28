@@ -11,26 +11,6 @@ impl Vec3 {
         Vec3 { e: [e0, e1, e2] }
     }
 
-    pub fn x(&self) -> f64 {
-        self.e[0]
-    }
-    pub fn y(&self) -> f64 {
-        self.e[1]
-    }
-    pub fn z(&self) -> f64 {
-        self.e[2]
-    }
-
-    pub fn r(&self) -> f64 {
-        self.e[0]
-    }
-    pub fn g(&self) -> f64 {
-        self.e[1]
-    }
-    pub fn b(&self) -> f64 {
-        self.e[2]
-    }
-
     pub fn length(&self) -> f64 {
         self.length_squared().sqrt()
     }
@@ -153,3 +133,39 @@ impl ops::Neg for Vec3 {
 // Type aliases for vec3
 pub type Point3 = Vec3;
 pub type Color = Vec3;
+
+impl Color {
+    pub fn r(&self) -> f64 {
+        self.e[0]
+    }
+    pub fn g(&self) -> f64 {
+        self.e[1]
+    }
+    pub fn b(&self) -> f64 {
+        self.e[2]
+    }
+}
+
+impl std::fmt::Display for Color {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(
+            f,
+            "{} {} {}",
+            (255.999 * self.x()) as i32,
+            (255.999 * self.y()) as i32,
+            (255.999 * self.z()) as i32
+        )
+    }
+}
+
+impl Point3 {
+    pub fn x(&self) -> f64 {
+        self.e[0]
+    }
+    pub fn y(&self) -> f64 {
+        self.e[1]
+    }
+    pub fn z(&self) -> f64 {
+        self.e[2]
+    }
+}
