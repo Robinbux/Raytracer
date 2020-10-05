@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/camera.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/image.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/color.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/util.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +93,6 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Cargo Command.Run raytracing_in_one_week" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -108,7 +110,9 @@
       <workItem from="1600552355365" duration="1956000" />
       <workItem from="1600593084431" duration="11327000" />
       <workItem from="1600712282879" duration="6488000" />
-      <workItem from="1600796109053" duration="388000" />
+      <workItem from="1600796109053" duration="1495000" />
+      <workItem from="1600954833759" duration="1505000" />
+      <workItem from="1601558188058" duration="3090000" />
     </task>
     <servers />
   </component>

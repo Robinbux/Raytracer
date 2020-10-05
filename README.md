@@ -7,7 +7,7 @@ Rust implementation of [Raytracing in One Weekend](https://raytracing.github.io/
 - [x] **Chapter 4**: Rays, a Simple Camera, and a Background
 - [x] **Chapter 5**: Adding a Sphere
 - [x] **Chapter 6**: Surface Normals and Multiple Objects
-- [ ] **Chapter 7**: Antialiasing
+- [x] **Chapter 7**: Antialiasing
 - [ ] **Chapter 8**: Diffuse Materials
 - [ ] **Chapter 9**: Metal
 - [ ] **Chapter 10**: Dielectrics

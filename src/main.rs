@@ -1,21 +1,24 @@
-use crate::color::write_color;
 use crate::hittable::{HitRecord, Hittable, HittableList};
 use crate::ray::Ray;
 use crate::sphere::Sphere;
+use crate::util::{write_color, random_double};
 use crate::vec3::{Color, Point3, Vec3};
 use std::f64::INFINITY;
+use crate::camera::Camera;
 
-mod color;
+mod camera;
 mod hittable;
 mod math_constants;
 mod ray;
 mod sphere;
+mod util;
 mod vec3;
 
 // Image
 const ASPECT_RATIO: f64 = 16.0 / 9.0;
 const IMAGE_WIDTH: u16 = 400;
 const IMAGE_HEIGHT: u16 = (IMAGE_WIDTH as f64 / ASPECT_RATIO) as u16;
+const SAMPLES_PER_PIXEL: u16 = 100;
 
 // Camera
 const VIEWPOINT_HEIGHT: f64 = 2.0;
@@ -30,7 +33,7 @@ const FOCAL: Vec3 = Vec3::new(0.0, 0.0, FOCAL_LENGTH);
 
 fn main() {
     // Camera
-    let LOWER_LEFT_CORNER: Point3 = ORIGIN - HORIZONTAL / 2.0 - VERTICAL / 2.0 - FOCAL; // Unable to make const...
+    let mut camera = Camera::new();
 
     // World
     let mut world = HittableList::default();
@@ -41,16 +44,16 @@ fn main() {
     println!("P3\n{} {}\n255\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
     for j in (0..IMAGE_HEIGHT).rev() {
-        eprintln!("\rScanlines remaining: {} ", j);
+        eprintln!("Scanlines remaining: {} ", j);
         for i in 0..IMAGE_WIDTH {
-            let u = f64::from(i) / f64::from(IMAGE_WIDTH - 1);
-            let v = f64::from(j) / f64::from(IMAGE_HEIGHT - 1);
-            let r = Ray::new(
-                ORIGIN,
-                LOWER_LEFT_CORNER + u * HORIZONTAL + v * VERTICAL - ORIGIN,
-            );
-            let pixel_color = ray_color(r, &world);
-            write_color(pixel_color);
+            let mut pixel_color = Color::new(0.0, 0.0, 0.0);
+            for s in 0..SAMPLES_PER_PIXEL {
+                let u = (f64::from(i) + random_double()) / f64::from(IMAGE_WIDTH - 1);
+                let v = (f64::from(j) + random_double()) / f64::from(IMAGE_HEIGHT - 1);
+                let r = camera.get_ray(u, v);
+                pixel_color = pixel_color + ray_color(r, &world)
+            }
+            write_color(pixel_color, SAMPLES_PER_PIXEL)
         }
     }
     eprintln!("Done\n");
