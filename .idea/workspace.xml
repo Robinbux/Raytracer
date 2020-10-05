@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/camera.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/image.ppm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/color.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/util.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hittable.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/hittable.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sphere.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/sphere.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,17 +68,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run raytracing_in_one_week" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package raytracing_in_one_week --bin raytracing_in_one_week" />
@@ -113,6 +100,7 @@
       <workItem from="1600796109053" duration="1495000" />
       <workItem from="1600954833759" duration="1505000" />
       <workItem from="1601558188058" duration="3090000" />
+      <workItem from="1601921243586" duration="2002000" />
     </task>
     <servers />
   </component>
@@ -202,12 +190,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/hittable.rs</url>
-          <line>48</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/hittable.rs</url>
-          <line>23</line>
+          <line>22</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

@@ -37,8 +37,14 @@ fn main() {
 
     // World
     let mut world = HittableList::default();
-    world.add(Box::new(Sphere::new(Point3::new(0.0, 0.0, -1.0), 0.5)));
-    world.add(Box::new(Sphere::new(Point3::new(0.0, -100.5, -1.0), 100.0)));
+    world.add(Box::new(Sphere {
+        center: Point3::new(0.0, 0.0, -1.0),
+        radius: 0.5,
+    }));
+    world.add(Box::new(Sphere {
+        center: Point3::new(0.0, -100.5, -1.0),
+        radius: 100.0,
+    }));
 
     // Render
     println!("P3\n{} {}\n255\n", IMAGE_WIDTH, IMAGE_HEIGHT);
@@ -61,18 +67,18 @@ fn main() {
 
 // Linear interpolation between blue and white, bases on t
 fn ray_color(ray: Ray, world: &HittableList) -> Color {
-    let rec = HitRecord::default();
-    let hit_record_option = world.hit(ray, 0.0, INFINITY);
-    if hit_record_option.is_some() {
-        return 0.5 * (hit_record_option.unwrap().normal + Color::new(1.0, 1.0, 1.0));
+    match world.hit(ray, 0.0, INFINITY) {
+        Some(hit_record) => 0.5 * (hit_record.normal + Color::new(1.0, 1.0, 1.0)),
+        None => {
+            let unit_direction = ray.dir.unit();
+            let t = 0.5 * (unit_direction.y() + 1.0);
+            (1.0 - t) * Color::new(1.0, 1.0, 1.0) + t * Color::new(0.5, 0.7, 1.0)
+        }
     }
-    let unit_direction = ray.dir.unit();
-    let t = 0.5 * (unit_direction.y() + 1.0);
-    return (1.0 - t) * Color::new(1.0, 1.0, 1.0) + t * Color::new(0.5, 0.7, 1.0);
 }
 
 fn hit_sphere(center: Point3, radius: f64, ray: Ray) -> f64 {
-    let oc = ray.orig - center;
+    let oc = ray.origin - center;
     let a = ray.dir.length_squared();
     let half_b = oc.dot(ray.dir);
     let c = oc.length_squared() - radius * radius;
