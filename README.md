@@ -18,4 +18,7 @@ Usage: `cargo run > image.ppm`
 
 You can open the image file with a program of your choice, i.e. preview.
 
-Shoutout to [Fabio](https://github.com/codeFabio) for the help in the Raytracing related tasks and to [Ben](https://github.com/benbachem) for reviewing my Rust code!
+Many thanks to [Fabio](https://github.com/codeFabio) for the help in the Raytracing related tasks and to [Ben](https://github.com/benbachem) for reviewing my Rust code!
+
+Current state:
+![](image.ppm)

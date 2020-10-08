@@ -1,3 +1,4 @@
+use crate::util::{random_double, random_double_in_range};
 use std::ops;
 use std::ops::Mul;
 
@@ -9,6 +10,27 @@ pub struct Vec3 {
 impl Vec3 {
     pub const fn new(e0: f64, e1: f64, e2: f64) -> Vec3 {
         Vec3 { e: [e0, e1, e2] }
+    }
+
+    pub fn random() -> Vec3 {
+        Vec3::new(random_double(), random_double(), random_double())
+    }
+
+    pub fn random_in_range(min: f64, max: f64) -> Vec3 {
+        Vec3::new(
+            random_double_in_range(min, max),
+            random_double_in_range(min, max),
+            random_double_in_range(min, max),
+        )
+    }
+
+    pub fn random_in_unit_sphere() -> Vec3 {
+        loop {
+            let p = Vec3::random_in_range(-1.0, 1.0);
+            if p.length_squared() < 1.0 {
+                return p;
+            }
+        }
     }
 
     pub fn length(&self) -> f64 {
