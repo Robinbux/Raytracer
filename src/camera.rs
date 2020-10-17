@@ -9,6 +9,7 @@ const VIEWPOINT_HEIGHT: f64 = 2.0;
 const VIEWPOINT_WIDTH: f64 = ASPECT_RATIO * VIEWPOINT_HEIGHT;
 const FOCAL_LENGTH: f64 = 1.0;
 
+#[derive(Clone, Copy)]
 pub struct Camera {
     origin: Point3,
     lower_left_corner: Point3,

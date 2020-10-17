@@ -2,19 +2,19 @@ use crate::vec3::Color;
 use rand::Rng;
 
 // Write the translated [0,255] value of each color component.
-pub fn write_color(pixel_color: Color, sample_per_pixel: u16) {
+pub fn write_color(pixel_color: Color, sample_per_pixel: u16) -> String {
     let mut r = pixel_color.r();
     let mut g = pixel_color.g();
     let mut b = pixel_color.b();
 
-    // Divide the color by the number of samples
+    // Divide the color by the number of samples and gamma-correct for gamma=2.0.
     let scale = 1.0 / f64::from(sample_per_pixel);
-    r *= scale;
-    g *= scale;
-    b *= scale;
+    r = (scale * r).sqrt();
+    g = (scale * g).sqrt();
+    b = (scale * b).sqrt();
 
     // Write the translated [0,255] value of each color component
-    println!(
+    format!(
         "{} {} {}\n",
         (256.0 * clamp(r, 0.0, 0.999)) as i32,
         (256.0 * clamp(g, 0.0, 0.999)) as i32,
