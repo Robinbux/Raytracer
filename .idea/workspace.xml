@@ -13,12 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/metal.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/image.ppm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camera.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/camera.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vec3.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vec3.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hittable.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/hittable.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/util.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math_constants.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/math_constants.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sphere.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/sphere.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,15 +82,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,11 +108,6 @@
       <envs />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
@@ -140,6 +140,7 @@
       <workItem from="1602154193839" duration="2511000" />
       <workItem from="1602161947017" duration="10705000" />
       <workItem from="1602961887069" duration="2298000" />
+      <workItem from="1603057088005" duration="2582000" />
     </task>
     <servers />
   </component>
@@ -151,10 +152,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="676" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1602961946842" />
-    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser" timestamp="1600715592745">
+    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser" timestamp="1603057734438">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1600715592745" />
+    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1603057734438" />
     <state x="366" y="552" key="#xdebugger.evaluate" timestamp="1602962183774">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
@@ -223,10 +224,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1045" y="342" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1600591522641" />
-    <state x="338" y="328" width="604" height="490" key="find.popup" timestamp="1602170997422">
+    <state x="338" y="328" width="604" height="490" key="find.popup" timestamp="1603057901266">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="338" y="328" width="604" height="490" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1602170997422" />
+    <state x="338" y="328" width="604" height="490" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1603057901266" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -238,7 +239,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.rs</url>
-          <line>56</line>
+          <line>87</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>

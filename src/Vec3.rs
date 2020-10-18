@@ -1,4 +1,5 @@
 use crate::util::{random_double, random_double_in_range};
+use std::f64::consts::PI;
 use std::ops;
 use std::ops::Mul;
 
@@ -33,6 +34,27 @@ impl Vec3 {
         }
     }
 
+    pub fn random_unit_vector() -> Vec3 {
+        let a = random_double_in_range(0.0, 2.0 * PI);
+        let z = random_double_in_range(-1.0, 1.0);
+        let r = (1.0 - z * z).sqrt();
+        Vec3::new(r * a.cos(), r * a.sin(), z)
+    }
+
+    pub fn random_in_hemisphere(normal: &Vec3) -> Vec3 {
+        let in_unit_sphere = Vec3::random_in_unit_sphere();
+        if in_unit_sphere.dot(normal) > 0.0 {
+            // In the same hemisphere as the normal
+            return in_unit_sphere;
+        } else {
+            return -in_unit_sphere;
+        }
+    }
+
+    pub fn reflect(v: &Vec3, n: &Vec3) -> Vec3 {
+        *v - 2.0 * v.dot(n) * *n
+    }
+
     pub fn length(&self) -> f64 {
         self.length_squared().sqrt()
     }
@@ -41,7 +63,7 @@ impl Vec3 {
         self.e[0] * self.e[0] + self.e[1] * self.e[1] + self.e[2] * self.e[2]
     }
 
-    pub fn dot(&self, other: Self) -> f64 {
+    pub fn dot(&self, other: &Self) -> f64 {
         self.e[0] * other.e[0] + self.e[1] * other.e[1] + self.e[2] * other.e[2]
     }
 
