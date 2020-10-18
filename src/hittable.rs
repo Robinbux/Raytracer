@@ -25,12 +25,12 @@ pub trait Hittable {
 
 #[derive(Default)]
 pub struct HittableList {
-    objects: Vec<Box<dyn Hittable>>,
+    objects: Vec<Box<dyn Hittable + Send>>,
 }
 
 impl HittableList {
     // Might be wrong?
-    pub fn hittable_list(&mut self, object: Box<dyn Hittable>) {
+    pub fn hittable_list(&mut self, object: Box<dyn Hittable + Send>) {
         self.add(object)
     }
 
@@ -38,7 +38,7 @@ impl HittableList {
         self.objects.clear()
     }
 
-    pub fn add(&mut self, object: Box<dyn Hittable>) {
+    pub fn add(&mut self, object: Box<dyn Hittable + Send>) {
         self.objects.push(object);
     }
 }
