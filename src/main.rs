@@ -1,12 +1,12 @@
 use crate::camera::Camera;
 use crate::hittable::{Hittable, HittableList};
+use crate::material::{Dielectric, Lambertian, Metal};
 use crate::ray::Ray;
 use crate::sphere::Sphere;
 use crate::util::{random_double, write_color};
 use crate::vec3::{Color, Point3, Vec3};
 use std::f64::INFINITY;
 use std::sync::Arc;
-use crate::material::{Lambertian, Metal, Dielectric};
 
 mod camera;
 mod hittable;
@@ -100,7 +100,7 @@ fn setup_scene() -> HittableList {
     let mut world = HittableList::default();
 
     let material_ground = Lambertian::new(Color::new(0.8, 0.8, 0.0));
-    let material_center = Dielectric::new(1.5);
+    let material_center = Lambertian::new(Color::new(0.7, 0.3, 0.3));
     let material_left = Dielectric::new(1.5);
     let material_right = Metal::new(Color::new(0.8, 0.6, 0.2), 1.0);
 
@@ -119,6 +119,12 @@ fn setup_scene() -> HittableList {
     world.add(Box::new(Sphere::new(
         Point3::new(-1.0, 0.0, -1.0),
         0.5,
+        Arc::new(material_left),
+    )));
+
+    world.add(Box::new(Sphere::new(
+        Point3::new(-1.0, 0.0, -1.0),
+        -0.4,
         Arc::new(material_left),
     )));
 

@@ -15,11 +15,8 @@
     <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/image.ppm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vec3.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vec3.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lambertian.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/material.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/material.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metal.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +136,7 @@
       <workItem from="1602154193839" duration="2511000" />
       <workItem from="1602161947017" duration="10705000" />
       <workItem from="1602961887069" duration="2298000" />
-      <workItem from="1603057088005" duration="10194000" />
+      <workItem from="1603057088005" duration="12169000" />
     </task>
     <servers />
   </component>
@@ -223,10 +220,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1045" y="342" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1600591522641" />
-    <state x="338" y="328" width="604" height="490" key="find.popup" timestamp="1603057901266">
+    <state x="338" y="328" width="604" height="490" key="find.popup" timestamp="1603122833738">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="338" y="328" width="604" height="490" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1603057901266" />
+    <state x="338" y="328" width="604" height="490" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1603122833737" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

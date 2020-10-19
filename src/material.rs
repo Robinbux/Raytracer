@@ -1,7 +1,8 @@
 use crate::hittable::HitRecord;
 use crate::ray::Ray;
-use crate::vec3::{Vec3, Color};
+use crate::vec3::{Color, Vec3};
 
+use crate::util::random_double;
 use std::cmp::min;
 
 pub trait Material: Sync + Send {
@@ -12,7 +13,7 @@ pub trait Material: Sync + Send {
 // ----- METAL -----
 pub struct Metal {
     pub(crate) albedo: Color,
-    pub(crate) fuzz: f64
+    pub(crate) fuzz: f64,
 }
 
 impl Metal {
@@ -53,6 +54,7 @@ impl Material for Lambertian {
 
 // ----------------------------------------------------------------------
 // ----- DIELECTRIC -----
+#[derive(Clone, Copy)]
 pub struct Dielectric {
     pub(crate) reflection_index: f64,
 }
@@ -61,6 +63,13 @@ impl Dielectric {
     pub fn new(reflection_index: f64) -> Dielectric {
         Dielectric { reflection_index }
     }
+
+    fn reflectance(cosine: f64, ref_idx: f64) -> f64 {
+        // Use Schlick's approximation for reflectance.
+        let mut r0: f64 = (1.0 - ref_idx) / (1.0 + ref_idx);
+        r0 = r0 * r0;
+        r0 + (1.0 - r0) * (1.0 - cosine).powi(5)
+    }
 }
 
 impl Material for Dielectric {
@@ -68,7 +77,7 @@ impl Material for Dielectric {
         let attenuation = Color::new(1.0, 1.0, 1.0);
         let reflection_ratio = match rec.front_face {
             true => 1.0 / self.reflection_index,
-            false => self.reflection_index
+            false => self.reflection_index,
         };
 
         let unit_direction = r_in.dir.unit();
@@ -81,9 +90,13 @@ impl Material for Dielectric {
 
         let sin_theta = (1.0 - cos_theta * cos_theta).sqrt();
 
-        let direction = match reflection_ratio * sin_theta > 1.0 {
+        let ref_bool = Dielectric::reflectance(cos_theta, reflection_ratio);
+
+        let direction = match reflection_ratio * sin_theta > 1.0
+            || Dielectric::reflectance(cos_theta, reflection_ratio) > random_double()
+        {
             true => Vec3::reflect(&unit_direction, &rec.normal),
-            false => Vec3::refract(&unit_direction, &rec.normal, reflection_ratio)
+            false => Vec3::refract(&unit_direction, &rec.normal, reflection_ratio),
         };
 
         let scattered = Ray::new(rec.p, direction);
