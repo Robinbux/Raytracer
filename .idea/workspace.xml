@@ -13,9 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/image.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camera.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/camera.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hittable.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/hittable.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metal.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/metal.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/material.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/material.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +141,7 @@
       <workItem from="1602154193839" duration="2511000" />
       <workItem from="1602161947017" duration="10705000" />
       <workItem from="1602961887069" duration="2298000" />
-      <workItem from="1603057088005" duration="2883000" />
+      <workItem from="1603057088005" duration="6252000" />
     </task>
     <servers />
   </component>
@@ -231,11 +237,6 @@
           <url>file://$PROJECT_DIR$/src/hittable.rs</url>
           <line>22</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/main.rs</url>
-          <line>87</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

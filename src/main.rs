@@ -5,7 +5,7 @@ use crate::metal::Metal;
 use crate::ray::Ray;
 use crate::sphere::Sphere;
 use crate::util::{random_double, write_color};
-use crate::vec3::{Color, Point3};
+use crate::vec3::{Color, Point3, Vec3};
 use std::f64::INFINITY;
 use std::sync::Arc;
 
@@ -30,36 +30,7 @@ const MAX_DEPTH: u16 = 50;
 
 fn main() {
     // World
-    let mut world = HittableList::default();
-
-    let material_ground = Lambertian::new(Color::new(0.8, 0.8, 0.0));
-    let material_center = Lambertian::new(Color::new(0.7, 0.3, 0.3));
-    let material_left = Metal::new(Color::new(0.8, 0.8, 0.8), 0.3);
-    let material_right = Metal::new(Color::new(0.8, 0.6, 0.2), 1.0);
-
-    world.add(Box::new(Sphere::new(
-        Point3::new(0.0, -100.5, -1.0),
-        100.0,
-        Arc::new(material_ground),
-    )));
-
-    world.add(Box::new(Sphere::new(
-        Point3::new(0.0, 0.0, -1.0),
-        0.5,
-        Arc::new(material_center),
-    )));
-
-    world.add(Box::new(Sphere::new(
-        Point3::new(-1.0, 0.0, -1.0),
-        0.5,
-        Arc::new(material_left),
-    )));
-
-    world.add(Box::new(Sphere::new(
-        Point3::new(1.0, 0.0, -1.0),
-        0.5,
-        Arc::new(material_right),
-    )));
+    let mut world = setup_scene();
 
     // Array holding the pixel values
     let mut pixel_vec: Vec<String> =
@@ -126,4 +97,39 @@ fn ray_color(ray: Ray, world: &HittableList, depth: u16) -> Color {
             (1.0 - t) * Color::new(1.0, 1.0, 1.0) + t * Color::new(0.5, 0.7, 1.0)
         }
     }
+}
+
+fn setup_scene() -> HittableList {
+    let mut world = HittableList::default();
+
+    let material_ground = Lambertian::new(Color::new(0.8, 0.8, 0.0));
+    let material_center = Lambertian::new(Color::new(0.7, 0.3, 0.3));
+    let material_left = Metal::new(Color::new(0.8, 0.8, 0.8), 0.3);
+    let material_right = Metal::new(Color::new(0.8, 0.6, 0.2), 1.0);
+
+    world.add(Box::new(Sphere::new(
+        Point3::new(0.0, -100.5, -1.0),
+        100.0,
+        Arc::new(material_ground),
+    )));
+
+    world.add(Box::new(Sphere::new(
+        Point3::new(0.0, 0.0, -1.0),
+        0.5,
+        Arc::new(material_center),
+    )));
+
+    world.add(Box::new(Sphere::new(
+        Point3::new(-1.0, 0.0, -1.0),
+        0.5,
+        Arc::new(material_left),
+    )));
+
+    world.add(Box::new(Sphere::new(
+        Point3::new(1.0, 0.0, -1.0),
+        0.5,
+        Arc::new(material_right),
+    )));
+
+    world
 }
