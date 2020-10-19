@@ -13,15 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4e9c00-248c-406e-a1e4-b96ba3d6cc8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/image.ppm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camera.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/camera.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hittable.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/hittable.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vec3.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vec3.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lambertian.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/material.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/material.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metal.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
       <workItem from="1602154193839" duration="2511000" />
       <workItem from="1602161947017" duration="10705000" />
       <workItem from="1602961887069" duration="2298000" />
-      <workItem from="1603057088005" duration="6252000" />
+      <workItem from="1603057088005" duration="10194000" />
     </task>
     <servers />
   </component>
@@ -153,10 +151,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="676" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1602961946842" />
-    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser" timestamp="1603057734438">
+    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser" timestamp="1603104642172">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1603057734438" />
+    <state x="402" y="362" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1603104642172" />
     <state x="366" y="552" key="#xdebugger.evaluate" timestamp="1602962183774">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
