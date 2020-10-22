@@ -3,7 +3,6 @@ use crate::ray::Ray;
 use crate::vec3::{Color, Vec3};
 
 use crate::util::random_double;
-use std::cmp::min;
 
 pub trait Material: Sync + Send {
     fn scatter(&self, r_in: &Ray, rec: &HitRecord) -> Option<(Ray, Vec3)>;
@@ -11,6 +10,7 @@ pub trait Material: Sync + Send {
 
 // ----------------------------------------------------------------------
 // ----- METAL -----
+// ----------------------------------------------------------------------
 pub struct Metal {
     pub(crate) albedo: Color,
     pub(crate) fuzz: f64,
@@ -33,6 +33,7 @@ impl Material for Metal {
 
 // ----------------------------------------------------------------------
 // ----- LAMBERTIAN -----
+// ----------------------------------------------------------------------
 pub struct Lambertian {
     pub(crate) albedo: Color,
 }
@@ -44,7 +45,7 @@ impl Lambertian {
 }
 
 impl Material for Lambertian {
-    fn scatter(&self, r_in: &Ray, rec: &HitRecord) -> Option<(Ray, Vec3)> {
+    fn scatter(&self, _r_in: &Ray, rec: &HitRecord) -> Option<(Ray, Vec3)> {
         let scatter_direction = rec.normal + Vec3::random_unit_vector();
         let scattered = Ray::new(rec.p, scatter_direction);
         let attenuation = self.albedo;
@@ -54,6 +55,7 @@ impl Material for Lambertian {
 
 // ----------------------------------------------------------------------
 // ----- DIELECTRIC -----
+// ----------------------------------------------------------------------
 #[derive(Clone, Copy)]
 pub struct Dielectric {
     pub(crate) reflection_index: f64,
@@ -89,8 +91,6 @@ impl Material for Dielectric {
         }
 
         let sin_theta = (1.0 - cos_theta * cos_theta).sqrt();
-
-        let ref_bool = Dielectric::reflectance(cos_theta, reflection_ratio);
 
         let direction = match reflection_ratio * sin_theta > 1.0
             || Dielectric::reflectance(cos_theta, reflection_ratio) > random_double()

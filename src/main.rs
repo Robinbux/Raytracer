@@ -4,7 +4,7 @@ use crate::material::{Dielectric, Lambertian, Metal};
 use crate::ray::Ray;
 use crate::sphere::Sphere;
 use crate::util::{random_double, write_color};
-use crate::vec3::{Color, Point3, Vec3};
+use crate::vec3::{Color, Point3};
 use std::f64::INFINITY;
 use std::sync::Arc;
 
@@ -27,7 +27,7 @@ const MAX_DEPTH: u16 = 50;
 
 fn main() {
     // World
-    let mut world = setup_scene();
+    let world = setup_scene();
 
     // Array holding the pixel values
     let mut pixel_vec: Vec<String> =
@@ -49,7 +49,7 @@ fn write_pixel_in_vec_for_given_range(
     line_nbr: u16,
 ) {
     // Camera
-    let mut camera = Camera::new();
+    let camera = Camera::new();
     eprintln!("Scanlines remaining: {} ", line_nbr);
     for i in 0..IMAGE_WIDTH {
         let mut pixel_color = Color::new(0.0, 0.0, 0.0);
