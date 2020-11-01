@@ -4,13 +4,16 @@ use crate::material::{Dielectric, Lambertian, Metal};
 use crate::ray::Ray;
 use crate::sphere::Sphere;
 use crate::util::{random_double, write_color};
-use crate::vec3::{Color, Point3};
+use crate::vec3::{Color, Point3, Vec3};
 use rayon::iter::{IndexedParallelIterator, ParallelIterator};
 use rayon::slice::ParallelSliceMut;
 use std::cmp;
 use std::f64::INFINITY;
 use std::sync::{Arc, Mutex};
 use std::time::{Duration, Instant};
+use std::fs;
+use std::io::Write;
+use std::f64::consts::PI;
 
 mod camera;
 mod hittable;
@@ -33,26 +36,14 @@ const MAX_DEPTH: u16 = 50;
 fn main() {
     // World
     let world = setup_scene();
-
-    // Array holding the pixel values
-    // let mut pixel_vec: Vec<String> =
-    //     vec!["".parse().unwrap(); (IMAGE_WIDTH as u32 * IMAGE_HEIGHT as u32) as usize];
-    //Vec::with_capacity((IMAGE_WIDTH as u32 * IMAGE_HEIGHT as u32) as usize);
-
-    // for j in (0..IMAGE_HEIGHT).rev() {
-    //     write_pixel_in_vec_for_given_range(&mut pixel_vec, &world, j);
-    // }
-    //
-    // print_pixels(&mut pixel_vec);
-
     let mut pixel_vec = Arc::new(Mutex::new(vec![
         String::from("");
         (IMAGE_WIDTH as u32 * IMAGE_HEIGHT as u32)
             as usize
     ]));
-    eprintln!("IMAGE WIDTH: {}", IMAGE_WIDTH);
-    eprintln!("IMAGE HEIGHT: {}", IMAGE_HEIGHT);
-    eprintln!("CHUNK SIZE: {}", CHUNK_SIZE);
+    println!("IMAGE WIDTH: {}", IMAGE_WIDTH);
+    println!("IMAGE HEIGHT: {}", IMAGE_HEIGHT);
+    println!("CHUNK SIZE: {}", CHUNK_SIZE);
     let now = Instant::now();
     pixel_vec
         .lock()
@@ -65,7 +56,7 @@ fn main() {
                 chunk_start_pos + CHUNK_SIZE as usize,
                 (IMAGE_WIDTH as u32 * IMAGE_HEIGHT as u32) as usize,
             );
-            eprintln!("-------------------------
+            println!("-------------------------
 Chunk Idx: {}
 Slice len: {}
 chunk_start_pos: {}
@@ -77,9 +68,9 @@ chunk_end_pos: {}
             }
         });
     let d = now.elapsed();
-    print_pixels(&mut pixel_vec.lock().unwrap());
-    eprintln!("took {:?}", d);
-    eprintln!("Done\n");
+    write_pixels_to_file(&mut pixel_vec.lock().unwrap());
+    println!("took {:?}", d);
+    println!("Done\n");
 }
 
 fn chunk_idx_to_start_pixel_pos(chunk_idx: usize) -> usize {
@@ -87,7 +78,13 @@ fn chunk_idx_to_start_pixel_pos(chunk_idx: usize) -> usize {
 }
 
 fn color_for_pixel(world: &HittableList, pixel_nbr: u32) -> String {
-    let camera = Camera::new();
+    let camera = Camera::new(
+        Point3::new(-2.0, 2.0, 1.0),
+        Point3::new(0.0, 0.0, -1.0),
+        Vec3::new(0.0, 1.0, 0.0),
+        20.0,
+        ASPECT_RATIO
+    );
     let line_nbr = pixel_to_line_nbr(pixel_nbr) as u16;
     let image_width_pos = pixel_nbr_to_image_width_pos(pixel_nbr);
     let mut pixel_color = Color::new(0.0, 0.0, 0.0);
@@ -108,13 +105,11 @@ fn pixel_nbr_to_image_width_pos(pixel_nbr: u32) -> u16 {
     (pixel_nbr % IMAGE_WIDTH as u32) as u16
 }
 
-fn print_pixels(pixel_vec: &mut Vec<String>) {
-    // Render
-    println!("P3\n{} {}\n255\n", IMAGE_WIDTH, IMAGE_HEIGHT);
-
-    for pixel in pixel_vec.iter() {
-        println!("{}", pixel);
-    }
+fn write_pixels_to_file(pixel_vec: &mut Vec<String>) {
+    let mut file = std::fs::File::create("image/image.ppm").expect("Create failed");
+    file.write_all(format!("P3\n{} {}\n255\n", IMAGE_WIDTH, IMAGE_HEIGHT).as_bytes()).expect("Write failed");
+    file.write_all(pixel_vec.concat().as_bytes()).expect("Write failed");
+    println!("Data written to file" );
 }
 
 // Linear interpolation between blue and white, bases on t
@@ -141,6 +136,12 @@ fn ray_color(ray: Ray, world: &HittableList, depth: u16) -> Color {
 }
 
 fn setup_scene() -> HittableList {
+
+
+    let R = (PI / 4.0).cos();
+
+
+
     let mut world = HittableList::default();
 
     let material_ground = Lambertian::new(Color::new(0.8, 0.8, 0.0));
