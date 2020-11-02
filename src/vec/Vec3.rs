@@ -1,4 +1,4 @@
-use crate::util::{random_double, random_double_in_range};
+use crate::utils::util::{random_double, random_double_in_range};
 use std::f64::consts::PI;
 use std::ops;
 use std::ops::Mul;
@@ -60,6 +60,19 @@ impl Vec3 {
         let r_out_perp = etai_over_etat * (*uv + cos_theta * *n);
         let r_out_parallel = -(1.0 - r_out_perp.length_squared()).abs().sqrt() * *n;
         r_out_perp + r_out_parallel
+    }
+
+    pub fn random_in_unit_disk() -> Vec3 {
+        loop {
+            let p = Vec3::new(
+                random_double_in_range(-1.0, 1.0),
+                random_double_in_range(-1.0, 1.0),
+                0.0,
+            );
+            if p.length_squared() < 1.0 {
+                return p;
+            }
+        }
     }
 
     pub fn length(&self) -> f64 {
@@ -218,5 +231,24 @@ impl Point3 {
     }
     pub fn z(&self) -> f64 {
         self.e[2]
+    }
+}
+
+#[derive(Clone, Copy)]
+pub struct Ray {
+    pub origin: Point3, // Origin
+    pub dir: Vec3,      // Direction
+}
+
+impl Ray {
+    pub fn new(origin: Point3, direction: Vec3) -> Ray {
+        Ray {
+            origin,
+            dir: direction,
+        }
+    }
+
+    pub fn at(self, t: f64) -> Point3 {
+        self.origin + t * self.dir
     }
 }

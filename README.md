@@ -11,8 +11,8 @@ Rust implementation of [Raytracing in One Weekend](https://raytracing.github.io/
 - [x] **Chapter 8**: Diffuse Materials
 - [x] **Chapter 9**: Metal
 - [x] **Chapter 10**: Dielectrics
-- [ ] **Chapter 11**: Positionable Camera
-- [ ] **Chapter 12**: Defocus Blur
+- [x] **Chapter 11**: Positionable Camera
+- [x] **Chapter 12**: Defocus Blur
 
 Usage: `cargo run > image.ppm`
 

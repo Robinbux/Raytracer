@@ -1,8 +1,6 @@
-use crate::hittable::{HitRecord, Hittable};
-use crate::material::Material;
-use crate::ray::Ray;
-use crate::vec3::Point3;
-
+use crate::objects::hittable::{HitRecord, Hittable};
+use crate::objects::material::Material;
+use crate::vec::vec3::{Point3, Ray};
 use std::sync::Arc;
 
 pub struct Sphere {

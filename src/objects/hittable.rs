@@ -1,6 +1,5 @@
-use crate::material::Material;
-use crate::ray::Ray;
-use crate::vec3::{Point3, Vec3};
+use crate::objects::material::Material;
+use crate::vec::vec3::{Point3, Ray, Vec3};
 use std::sync::Arc;
 
 pub struct HitRecord {

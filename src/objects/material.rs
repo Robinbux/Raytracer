@@ -1,8 +1,6 @@
-use crate::hittable::HitRecord;
-use crate::ray::Ray;
-use crate::vec3::{Color, Vec3};
-
-use crate::util::random_double;
+use crate::objects::hittable::HitRecord;
+use crate::utils::util::random_double;
+use crate::vec::vec3::{Color, Ray, Vec3};
 
 pub trait Material: Sync + Send {
     fn scatter(&self, r_in: &Ray, rec: &HitRecord) -> Option<(Ray, Vec3)>;
